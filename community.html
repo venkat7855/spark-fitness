@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11120f">
+  <meta name="description" content="Join the Spark Fitness community: challenges, workout passport, weekly quests, and member wins.">
+  <title>Spark Club — Spark Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Spark Fitness home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html#training">Training</a><a href="index.html#about">Our gym</a><a href="index.html#membership">Membership</a><a href="products.html">Products</a><a href="community.html" aria-current="page">Spark Club</a><a href="login.html">Member Login</a>
+      <a class="nav-cta" href="index.html#contact">VISIT THE GYM <span>↗</span></a>
+    </nav>
+  </header>
+  <main class="club-page">
+    <section class="club-hero"><p class="eyebrow"><span class="eyebrow-line"></span> SHOW UP. JOIN IN.</p><h1>SPARK<br><span>CLUB.</span></h1><p>Pick the weekly vibe, collect workout stamps, celebrate your wins, and keep your momentum going.</p><a class="button button-accent" href="#club-activities">GET IN THE MIX <span>↓</span></a><span class="club-hero-mark" aria-hidden="true">✳</span></section>
+    <section class="club-section" id="club-activities">
+      <div class="club-intro"><div><p class="eyebrow dark-eyebrow">YOUR GYM. YOUR PEOPLE.</p><h2>MAKE IT<br><span>YOURS.</span></h2></div><p>Everyone can earn visitor badges from the weekly vote, challenge, and quest. Spark members can earn extra badges for gym visits and workout-passport activities.</p></div>
+      <div class="club-grid">
+        <article class="club-card pick-card"><div class="club-card-head"><div><p class="club-kicker">MEMBER PICK OF THE WEEK</p><h3>WHAT SHOULD WE DO NEXT?</h3></div><span class="club-card-no">01</span></div><p class="club-copy">Pick the idea you’d most like to see at Spark.</p><div class="vote-options" id="club-vote-options"><button type="button" data-vote="coach-circuit"><span>01</span> Coach’s circuit</button><button type="button" data-vote="cardio-groove"><span>02</span> Cardio groove</button><button type="button" data-vote="strength-challenge"><span>03</span> Strength challenge</button></div><p class="club-local-note" id="club-vote-message">Your choice is saved on this device; votes are not combined across members yet.</p></article>
+
+        <article class="club-card team-card"><div class="club-card-head"><div><p class="club-kicker">SPARK STREAK TEAMS</p><h3>PICK YOUR CREW.</h3></div><span class="club-card-no">02</span></div><p class="club-copy">Choose a team to cheer on while you build your own visit streak.</p><div class="team-options"><button type="button" data-team="team-spark"><span class="team-symbol">✳</span><strong>TEAM SPARK</strong><small>Keep the momentum glowing.</small></button><button type="button" data-team="team-pulse"><span class="team-symbol">ϟ</span><strong>TEAM PULSE</strong><small>One visit at a time.</small></button></div><p class="club-local-note" id="team-message">Choose a team. Team totals need shared member accounts.</p></article>
+
+        <article class="club-card passport-card"><div class="club-card-head"><div><p class="club-kicker">MEMBER-ONLY WORKOUT PASSPORT</p><h3>COLLECT YOUR STAMPS.</h3></div><span class="club-card-no">03</span></div><p class="club-copy">Spark members can mark new gym activities here to earn extra member badges. In this preview, stamps are self-reported on this device.</p><div class="passport-grid" id="passport-grid"><button type="button" data-passport="coach"><span>✳</span><strong>TRAIN WITH A COACH</strong></button><button type="button" data-passport="machine"><span>↗</span><strong>TRY A NEW MACHINE</strong></button><button type="button" data-passport="class"><span>♫</span><strong>TRY A GROUP CLASS</strong></button><button type="button" data-passport="friend"><span>＋</span><strong>BRING A FRIEND</strong></button></div><p class="passport-count" id="passport-count">0 of 4 stamps collected</p></article>
+
+        <article class="club-card win-card"><div class="club-card-head"><div><p class="club-kicker">WHAT’S YOUR WIN?</p><h3>THE LITTLE WINS COUNT.</h3></div><span class="club-card-no">04</span></div><p class="club-copy">Share a moment you’re proud of. It stays in this browser preview.</p><form id="win-form" class="win-form"><label for="win-name">Name or nickname<input id="win-name" maxlength="24" placeholder="Your name" required></label><label for="win-text">Your win<input id="win-text" maxlength="100" placeholder="e.g. I made it to my first class" required></label><button class="button button-dark" type="submit">ADD MY WIN <span>↗</span></button></form><ul class="win-list" id="win-list" aria-live="polite"></ul><p class="club-local-note">Only add something you’re happy to keep on this device.</p></article>
+
+        <article class="club-card next-goal-card"><div class="club-card-head"><div><p class="club-kicker">AFTER YOUR SPARK WEEK</p><h3>CHOOSE YOUR NEXT GOAL.</h3></div><span class="club-card-no">05</span></div><p class="club-copy">Pick a focus for your next week at the gym.</p><form id="next-goal-form" class="next-goal-form"><label for="next-goal">My next focus<select id="next-goal"><option value="strength">Learn a new strength move</option><option value="cardio">Build a cardio habit</option><option value="consistency">Show up consistently</option><option value="coach">Train with a coach</option></select></label><button class="button button-dark" type="submit">SET MY NEXT GOAL <span>↗</span></button></form><p class="goal-result" id="goal-result" aria-live="polite"></p></article>
+
+        <article class="club-card quest-card"><div class="club-card-head"><div><p class="club-kicker">ROTATING GYM QUEST</p><h3 id="quest-title">THIS WEEK’S QUEST</h3></div><span class="club-card-no">06</span></div><p class="club-copy" id="quest-copy"></p><button class="button button-accent" id="quest-complete" type="button">MARK QUEST COMPLETE <span>↗</span></button><p class="club-local-note" id="quest-message">A new quest arrives each week.</p></article>
+
+        <article class="club-card leaderboard-card"><div class="club-card-head"><div><p class="club-kicker">BADGE LEADERBOARD</p><h3>CELEBRATE THE SHOW-UPS.</h3></div><span class="club-card-no">07</span></div><div class="badge-track-summary"><div><strong id="visitor-badge-count">0</strong><span>VISITOR BADGES</span></div><div><strong id="member-badge-count">0</strong><span>EXTRA MEMBER BADGES</span></div><div><strong id="my-badge-count">0</strong><span>TOTAL ON THIS DEVICE</span></div></div><div class="leaderboard-table"><div class="leaderboard-row leaderboard-head"><span>RANK</span><span>MEMBER</span><span>BADGES</span></div><div class="leaderboard-empty">Gym-wide rankings will show here when Spark member accounts and shared storage are connected.</div></div><p class="club-local-note">Visitors can earn challenge, vote, and quest badges. Members can collect those plus visit and workout-passport badges. Official rankings need verified member accounts; this preview saves progress only on this device.</p></article>
+      </div>
+    </section>
+    <section class="club-bottom"><p class="eyebrow"><span class="eyebrow-line"></span> KEEP YOUR SPARK GOING</p><h2>SEE YOU<br><span>AT THE GYM.</span></h2><a class="button button-accent" href="index.html#membership">VIEW MEMBERSHIP <span>↗</span></a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html#home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a><span>SHOW UP. PUT IN THE WORK. GET STRONGER.</span><span>© <span id="year"></span> SPARK FITNESS</span></footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11120f">
+  <meta name="description" content="Spark Fitness member sign-in.">
+  <title>Member Login — Spark Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Spark Fitness home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html#training">Training</a><a href="index.html#membership">Membership</a><a href="products.html">Products</a><a href="community.html">Spark Club</a><a href="login.html" aria-current="page">Member Login</a>
+      <a class="nav-cta" href="index.html#contact">VISIT THE GYM <span>↗</span></a>
+    </nav>
+  </header>
+  <main class="login-page">
+    <section class="login-art" aria-hidden="true"><span class="login-orbit orbit-one"></span><span class="login-orbit orbit-two"></span><span class="login-big-mark">S</span><p>SHOW UP.<br>GET STRONGER.</p></section>
+    <section class="login-content">
+      <div class="login-card">
+        <p class="eyebrow dark-eyebrow">SPARK CLUB MEMBER ACCESS</p>
+        <h1>WELCOME<br><span>BACK.</span></h1>
+        <p class="login-intro">Sign in to join your team, keep your workout passport, and track your badges.</p>
+        <div class="login-preview-note"><span>●</span> MEMBER SIGN-IN PREVIEW — ACCOUNTS AREN’T CONNECTED YET</div>
+        <form id="member-login-form" novalidate>
+          <label for="member-email">Email address<input id="member-email" name="email" type="email" autocomplete="username" placeholder="you@example.com" required></label>
+          <label for="member-password">Password<span class="password-field"><input id="member-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required><button id="password-toggle" type="button" aria-label="Show password" aria-pressed="false">SHOW</button></span></label>
+          <button class="button button-dark login-submit" type="submit">SIGN IN <span>↗</span></button>
+        </form>
+        <p class="login-status" id="login-status" role="status" aria-live="polite" hidden></p>
+        <p class="login-help">New to Spark Club? <a href="register.html">Create an account <span>↗</span></a></p>
+        <p class="login-help">Member access will be enabled after Spark Fitness confirms your membership.</p>
+        <a class="text-link login-back" href="community.html">Back to Spark Club <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html#home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a><span>SHOW UP. PUT IN THE WORK. GET STRONGER.</span><span>© <span id="year"></span> SPARK FITNESS</span></footer>
+</body>
+</html>

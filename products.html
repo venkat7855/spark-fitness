@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11120f">
+  <meta name="description" content="Explore products available at Spark Fitness. Our product list is coming soon.">
+  <title>Products — Spark Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Spark Fitness home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html#training">Training</a><a href="index.html#about">Our gym</a><a href="index.html#membership">Membership</a><a href="products.html" aria-current="page">Products</a><a href="community.html">Spark Club</a><a href="login.html">Member Login</a>
+      <a class="nav-cta" href="index.html#contact">VISIT THE GYM <span>↗</span></a>
+    </nav>
+  </header>
+  <main class="products-page">
+    <section class="products-hero">
+      <p class="eyebrow"><span class="eyebrow-line"></span> SPARK FITNESS SHOP</p>
+      <h1>THE GOOD<br><span>STUFF.</span></h1>
+      <p>Products available at Spark Fitness will be listed here. Check back soon for our product range, details, and prices.</p>
+      <a class="button button-accent" href="index.html#contact">ASK US AT THE GYM <span>↗</span></a>
+    </section>
+    <section class="catalog-section">
+      <div class="catalog-heading"><div><p class="eyebrow dark-eyebrow">PRODUCT RANGE</p><h2>FUEL YOUR<br><span>ROUTINE.</span></h2></div><p class="section-intro">A selection from the Venky’s Nutrition brochure. Prices shown are the printed MRP; ask at Spark Fitness to confirm current availability.</p></div>
+      <div class="product-filters" role="search" aria-label="Filter products">
+        <label class="product-search-label" for="product-search">Search<input id="product-search" type="search" placeholder="Search products" autocomplete="off"></label>
+        <label for="product-type-filter">Product type<select id="product-type-filter"><option value="">All types</option><option value="protein">Protein</option><option value="mass-gainer">Mass gainer</option><option value="workout-support">Workout support</option><option value="energy">Energy</option></select></label>
+        <label for="product-flavor-filter">Flavor<select id="product-flavor-filter"><option value="">All flavors</option><option value="chocolate">Chocolate</option><option value="mango">Mango</option><option value="swiss-chocolate">Swiss Chocolate</option><option value="unflavoured">Unflavoured</option><option value="lemon">Lemon</option><option value="watermelon">Watermelon</option><option value="orange">Orange</option></select></label>
+        <label for="product-size-filter">Pack size<select id="product-size-filter"><option value="">All sizes</option><option value="100g">100 g</option><option value="200g">200 g</option><option value="250g">250 g</option><option value="450g">450 g</option><option value="500g">500 g</option><option value="1kg">1 kg</option><option value="2kg">2 kg</option><option value="3kg">3 kg</option><option value="4kg">4 kg</option></select></label>
+        <button class="filter-reset" id="product-filter-reset" type="button">CLEAR FILTERS</button>
+      </div>
+      <p class="product-result-count" id="product-result-count" aria-live="polite"></p>
+      <div class="products-grid">
+        <article class="product-card" data-type="protein" data-flavours="chocolate mango" data-sizes="1kg 2kg"><div class="product-card-top"><span>01</span><span class="product-type">PROTEIN</span></div><h3>ALBUMEN PLUS</h3><p class="product-detail">Egg white protein supplement</p><p class="product-flavor">Chocolate · Mango</p><div class="product-sizes"><p><span>1 kg</span><strong>₹3,960</strong></p><p><span>2 kg</span><strong>₹7,386</strong></p></div></article>
+        <article class="product-card" data-type="mass-gainer" data-flavours="chocolate" data-sizes="1kg 3kg"><div class="product-card-top"><span>02</span><span class="product-type">MASS GAINER</span></div><h3>MASS GAINER</h3><p class="product-detail">Weight gain supplement</p><p class="product-flavor">Chocolate</p><div class="product-sizes"><p><span>1 kg</span><strong>₹1,379</strong></p><p><span>3 kg</span><strong>₹3,737</strong></p></div></article>
+        <article class="product-card" data-type="mass-gainer" data-flavours="chocolate" data-sizes="1kg 2kg 4kg"><div class="product-card-top"><span>03</span><span class="product-type">MASS GAINER</span></div><h3>INTENSE MASS</h3><p class="product-detail">Protein and carbohydrate blend</p><p class="product-flavor">Chocolate</p><div class="product-sizes"><p><span>1 kg</span><strong>₹1,690</strong></p><p><span>2 kg</span><strong>₹2,936</strong></p><p><span>4 kg</span><strong>₹5,562</strong></p></div></article>
+        <article class="product-card" data-type="protein" data-flavours="unflavoured" data-sizes="200g"><div class="product-card-top"><span>04</span><span class="product-type">PROTEIN</span></div><h3>CHIC-O-HOLIC</h3><p class="product-detail">Chicken protein supplement</p><p class="product-flavor">Unflavoured</p><div class="product-sizes"><p><span>200 g</span><strong>₹1,201</strong></p></div></article>
+        <article class="product-card" data-type="protein" data-flavours="swiss-chocolate" data-sizes="1kg 2kg"><div class="product-card-top"><span>05</span><span class="product-type">PROTEIN</span></div><h3>WHEY ISOLATE</h3><p class="product-detail">Whey protein isolate</p><p class="product-flavor">Swiss Chocolate</p><div class="product-sizes"><p><span>1 kg</span><strong>₹7,499</strong></p><p><span>2 kg</span><strong>₹14,999</strong></p></div></article>
+        <article class="product-card" data-type="protein" data-flavours="mango swiss-chocolate" data-sizes="1kg 2kg"><div class="product-card-top"><span>06</span><span class="product-type">PROTEIN</span></div><h3>WHEY</h3><p class="product-detail">Whey protein supplement</p><p class="product-flavor">Mango · Swiss Chocolate</p><div class="product-sizes"><p><span>1 kg</span><strong>₹6,500</strong></p><p><span>2 kg</span><strong>₹12,999</strong></p></div></article>
+        <article class="product-card" data-type="workout-support" data-flavours="lemon watermelon" data-sizes="450g"><div class="product-card-top"><span>07</span><span class="product-type">WORKOUT SUPPORT</span></div><h3>BCAA</h3><p class="product-detail">Branched-chain amino acid supplement</p><p class="product-flavor">Lemon · Watermelon</p><div class="product-sizes"><p><span>450 g</span><strong>₹1,824</strong></p></div></article>
+        <article class="product-card" data-type="workout-support" data-flavours="unflavoured" data-sizes="250g"><div class="product-card-top"><span>08</span><span class="product-type">WORKOUT SUPPORT</span></div><h3>GLUTAMINE</h3><p class="product-detail">Glutamine supplement</p><p class="product-flavor">Unflavoured</p><div class="product-sizes"><p><span>250 g</span><strong>₹1,156</strong></p></div></article>
+        <article class="product-card" data-type="energy" data-flavours="orange" data-sizes="500g 1kg"><div class="product-card-top"><span>09</span><span class="product-type">ENERGY</span></div><h3>HY SPEED</h3><p class="product-detail">Energy and hydration drink mix</p><p class="product-flavor">Orange</p><div class="product-sizes"><p><span>500 g</span><strong>₹400</strong></p><p><span>1 kg</span><strong>₹667</strong></p></div></article>
+        <article class="product-card" data-type="workout-support" data-flavours="unflavoured" data-sizes="100g 200g"><div class="product-card-top"><span>10</span><span class="product-type">WORKOUT SUPPORT</span></div><h3>CREATINE</h3><p class="product-detail">Creatine supplement</p><p class="product-flavor">Unflavoured</p><div class="product-sizes"><p><span>100 g</span><strong>₹578</strong></p><p><span>200 g</span><strong>₹1,067</strong></p></div></article>
+      </div>
+      <p class="product-no-results" id="product-no-results" hidden>No products match these filters. Try changing your search.</p>
+      <section class="online-cart" id="online-order" aria-labelledby="order-title"><div class="online-cart-head"><div><p class="eyebrow dark-eyebrow">ORDER ONLINE</p><h2 id="order-title">YOUR <span>CART.</span></h2></div><span class="cart-count" id="cart-count">0 ITEMS</span></div><p class="cart-empty" id="cart-empty">Choose a pack size above and add it to your cart.</p><ul class="order-items" id="order-items"></ul><div class="cart-total"><span>ESTIMATED TOTAL</span><strong id="cart-total">₹0</strong></div><button class="button button-dark checkout-button" id="checkout-button" type="button">CHECKOUT ON WHATSAPP <span>↗</span></button><p class="checkout-note" id="checkout-note">Add items to your cart, then tap checkout to send your order to Spark Fitness on WhatsApp.</p><button class="clear-cart" id="clear-cart" type="button" hidden>EMPTY CART</button></section>
+      <div class="catalog-footer"><p>Want to know what’s in stock?</p><a class="button button-dark" href="index.html#contact">ASK AT SPARK FITNESS <span>↗</span></a></div>
+    </section>
+  </main>
+  <a class="floating-cart-link" id="floating-cart-link" href="#online-order" hidden>VIEW CART <span id="floating-cart-count">0</span> <b>↓</b></a>
+  <footer><a class="brand footer-brand" href="index.html#home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a><span>SHOW UP. PUT IN THE WORK. GET STRONGER.</span><span>© <span id="year"></span> SPARK FITNESS</span></footer>
+</body>
+</html>

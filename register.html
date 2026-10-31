@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11120f">
+  <meta name="description" content="Create a Spark Fitness member account.">
+  <title>Join Spark Club — Spark Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Spark Fitness home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html#training">Training</a><a href="index.html#membership">Membership</a><a href="products.html">Products</a><a href="community.html">Spark Club</a><a href="login.html">Member Login</a>
+      <a class="nav-cta" href="index.html#contact">VISIT THE GYM <span>↗</span></a>
+    </nav>
+  </header>
+  <main class="login-page register-page">
+    <section class="login-art" aria-hidden="true"><span class="login-orbit orbit-one"></span><span class="login-orbit orbit-two"></span><span class="login-big-mark">S</span><p>START YOUR<br>SPARK.</p></section>
+    <section class="login-content">
+      <div class="login-card register-card">
+        <p class="eyebrow dark-eyebrow">JOIN THE SPARK CLUB</p>
+        <h1>LET’S GET<br><span>STARTED.</span></h1>
+        <p class="login-intro">Create your account to keep your Spark Club activities together.</p>
+        <div class="login-preview-note"><span>●</span> REGISTRATION PREVIEW — ACCOUNTS AREN’T CONNECTED YET</div>
+        <form id="member-register-form" novalidate>
+          <label for="register-name">Full name<input id="register-name" name="name" type="text" autocomplete="name" placeholder="Your name" required></label>
+          <label for="register-phone">Mobile number<input id="register-phone" name="phone" type="tel" autocomplete="tel" placeholder="Your mobile number" required></label>
+          <label for="register-email">Email address<input id="register-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <label for="register-member-id">Gym member ID <span class="optional-label">OPTIONAL · IF THE GYM GAVE YOU ONE</span><input id="register-member-id" name="member-id" type="text" autocomplete="off" placeholder="Member ID"></label>
+          <label for="register-password">Create password<input id="register-password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="At least 8 characters" required></label>
+          <label for="register-confirm-password">Confirm password<input id="register-confirm-password" name="confirm-password" type="password" autocomplete="new-password" minlength="8" placeholder="Enter it again" required></label>
+          <button class="button button-dark login-submit" type="submit">CREATE MY ACCOUNT <span>↗</span></button>
+        </form>
+        <p class="login-status" id="register-status" role="status" aria-live="polite" hidden></p>
+        <p class="login-help register-switch">Already registered? <a href="login.html">Sign in here <span>↗</span></a></p>
+        <p class="login-help">Member badges will be available after Spark Fitness confirms your membership.</p>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html#home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a><span>SHOW UP. PUT IN THE WORK. GET STRONGER.</span><span>© <span id="year"></span> SPARK FITNESS</span></footer>
+</body>
+</html>

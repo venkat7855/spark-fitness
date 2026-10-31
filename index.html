@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11120f">
+  <meta name="description" content="Spark Fitness — a stronger kind of gym. Find your training, your people, and your next level.">
+  <title>Spark Fitness — Built by effort</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Spark Fitness home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#training">Training</a><a href="#about">Our gym</a><a href="#membership">Membership</a><a href="products.html">Products</a><a href="community.html">Spark Club</a><a href="login.html">Member Login</a>
+      <a class="nav-cta" href="#plan-finder">FIND YOUR WORKOUT <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image" role="img" aria-label="Athlete training with weights in a gym"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> YOUR WORK. YOUR WAY.</p>
+        <h1>BUILT<br>BY <span>EFFORT.</span></h1>
+        <p class="hero-copy">No shortcuts. No judgment. Just good people putting in the work—and getting stronger together.</p>
+        <div class="hero-actions"><a class="button button-accent" href="#membership">SEE MEMBERSHIP PLANS <span>↗</span></a><a class="text-link" href="#training">Explore training <span>↓</span></a></div>
+      </div>
+      <div class="hero-note"><span class="note-dot"></span> OPEN EARLY. OPEN LATE. ALWAYS ALL IN.</div>
+      <div class="hero-index">01 <span>/</span> 03</div>
+    </section>
+
+    <section class="ticker" aria-label="Gym values"><div class="ticker-track"><span>SHOW UP</span><i>✳</i><span>PUT IN THE WORK</span><i>✳</i><span>GET STRONGER</span><i>✳</i><span>SHOW UP</span><i>✳</i><span>PUT IN THE WORK</span><i>✳</i><span>GET STRONGER</span><i>✳</i></div></section>
+
+    <section class="section training" id="training">
+      <div class="section-heading"><div><p class="eyebrow dark-eyebrow">FIND YOUR THING</p><h2>TRAINING THAT<br><span>MEETS YOU HERE.</span></h2></div><p class="section-intro">First time or hundredth session, we’ve got a way in. Find the kind of training that keeps you coming back.</p></div>
+      <div class="training-grid">
+        <article class="training-card strength"><div class="card-number">01 / TRAIN</div><div><p class="card-kicker">GET STRONGER</p><h3>STRENGTH<br>TRAINING</h3><a href="#contact" class="circle-link" aria-label="Explore strength training">↗</a></div></article>
+        <article class="training-card classes"><div class="card-number">02 / MOVE</div><div><p class="card-kicker">FIND YOUR PACE</p><h3>GROUP<br>CLASSES</h3><a href="#contact" class="circle-link" aria-label="Explore group classes">↗</a></div></article>
+        <article class="training-card coaching"><div class="card-number">03 / GROW</div><div><p class="card-kicker">WE’RE IN YOUR CORNER</p><h3>PERSONAL<br>COACHING</h3><a href="#contact" class="circle-link" aria-label="Explore personal coaching">↗</a></div></article>
+      </div>
+    </section>
+
+    <section class="about" id="about"><div class="about-photo" role="img" aria-label="Modern, welcoming gym floor"></div><div class="about-copy"><p class="eyebrow"><span class="eyebrow-line"></span> MORE THAN A WORKOUT</p><h2>GOOD ENERGY.<br><span>REAL PEOPLE.</span></h2><p>At Spark Fitness, our two trainers are here to help you get started, stay consistent, and make progress. Come as you are—we’ll meet you where you’re at.</p><div class="stats"><div><strong>2</strong><span>EXPERIENCED TRAINERS</span></div><div><strong>1:1</strong><span>COACHING THAT CLICKS</span></div><div><strong>100%</strong><span>HERE FOR YOUR PROGRESS</span></div></div><a class="text-link light-link" href="#contact">Come see for yourself <span>↗</span></a></div></section>
+
+    <section class="plan-finder section" id="plan-finder"><div class="finder-intro"><p class="eyebrow"><span class="eyebrow-line"></span> YOUR SPARK STARTS HERE</p><h2>FIND YOUR<br><span>FIT.</span></h2><p>Tell us what you’re working toward and we’ll suggest a simple workout week to get started.</p></div><div class="finder-panel"><form id="plan-finder-form"><label for="finder-goal">Your goal<select id="finder-goal" required><option value="strength">Build strength</option><option value="cardio">Cardio + strength</option><option value="fitness">General fitness</option></select></label><label for="finder-experience">Training experience<select id="finder-experience" required><option value="beginner">New to training</option><option value="regular">I train regularly</option></select></label><label for="finder-days">Days per week<select id="finder-days" required><option value="2">2 days</option><option value="3" selected>3 days</option><option value="4">4 days</option></select></label><label for="finder-height">Height (cm)<input id="finder-height" type="number" min="80" max="250" step="0.1" placeholder="e.g. 170" required></label><label for="finder-weight">Weight (kg)<input id="finder-weight" type="number" min="25" max="300" step="0.1" placeholder="e.g. 65" required></label><button class="button button-accent" type="submit">SUGGEST MY WORKOUT <span>↗</span></button></form><p class="finder-privacy">Height and weight stay in this browser and aren’t saved or sent. They’re context for your trainer; your routine is based on your goal, experience, and available days.</p><div class="finder-result" id="finder-result" role="status" aria-live="polite" hidden><strong id="finder-result-title"></strong><p id="finder-result-copy"></p><ul id="finder-workouts"></ul><p class="finder-safety">This is a general starting plan. Ask a Spark trainer to tailor it, especially if you have an injury or health condition.</p></div></div></section>
+
+    <section class="engagement section" id="spark-community"><div class="engagement-heading"><div><p class="eyebrow dark-eyebrow">SMALL STEPS. REAL MOMENTUM.</p><h2>MAKE YOUR<br><span>SPARK.</span></h2></div><p class="section-intro">Try a short challenge, test a sample workout, and celebrate the days you show up.</p></div><div class="engagement-grid">
+      <article class="engage-card challenge-card"><div class="engage-card-heading"><div><p class="card-kicker">START HERE</p><h3>7-DAY SPARK CHALLENGE</h3></div><span class="engage-stamp">01—07</span></div><p class="engage-description">One small action each day. Go at a comfortable pace and ask a trainer for help with any movement.</p><div class="challenge-progress-row"><progress id="challenge-progress" max="7" value="0">0 of 7</progress><span id="challenge-progress-label">0 / 7 complete</span></div><div class="challenge-list" id="challenge-list">
+        <label><input type="checkbox" data-challenge-day="1"><span class="challenge-day">DAY 01</span><span>Take a 15-minute comfortable walk or easy cycle.</span></label>
+        <label><input type="checkbox" data-challenge-day="2"><span class="challenge-day">DAY 02</span><span>Try a trainer-guided strength session.</span></label>
+        <label><input type="checkbox" data-challenge-day="3"><span class="challenge-day">DAY 03</span><span>Do 10 minutes of gentle mobility or stretching.</span></label>
+        <label><input type="checkbox" data-challenge-day="4"><span class="challenge-day">DAY 04</span><span>Choose an easy cardio activity you enjoy.</span></label>
+        <label><input type="checkbox" data-challenge-day="5"><span class="challenge-day">DAY 05</span><span>Practice a few strength exercises with a coach.</span></label>
+        <label><input type="checkbox" data-challenge-day="6"><span class="challenge-day">DAY 06</span><span>Get moving with a walk, dance, or sport.</span></label>
+        <label><input type="checkbox" data-challenge-day="7"><span class="challenge-day">DAY 07</span><span>Celebrate finishing your first Spark week.</span></label>
+      </div><p class="local-save-note">Your challenge progress is saved only on this device.</p></article>
+
+      <article class="engage-card sample-workout"><div class="engage-card-heading"><div><p class="card-kicker">PRESS PLAY</p><h3>TRY A WORKOUT</h3></div><span class="engage-stamp">2 MIN</span></div><p class="engage-description">A gentle movement sampler. Ask a trainer to demonstrate the moves first.</p><div class="timer-display" aria-live="polite"><span id="workout-timer">00:30</span><span id="workout-phase">READY</span></div><p class="timer-move" id="workout-move">Chair squats or comfortable sit-to-stands</p><div class="timer-track"><span id="timer-progress"></span></div><div class="timer-buttons"><button class="button button-dark" id="timer-start" type="button">START</button><button class="timer-secondary" id="timer-reset" type="button">RESET</button></div><p class="timer-safety">Pause any time. Stop if you feel pain or unwell.</p></article>
+    </div>
+
+    <article class="engage-card streak-card"><div class="streak-top"><div><p class="card-kicker">KEEP SHOWING UP</p><h3>YOUR VISIT STREAK</h3><p class="engage-description">Log your gym visits to build a little momentum, one session at a time.</p></div><button class="button button-accent" id="log-visit" type="button">LOG TODAY’S VISIT <span>↗</span></button></div><div class="streak-summary"><strong id="visit-streak-count">0</strong><span>DAY STREAK</span><span class="visit-total" id="visit-total">0 visits logged</span></div><div class="visit-week" id="visit-week" aria-label="Recent visit calendar"></div><p class="local-save-note">Visit history and milestones stay only in this browser on this device.</p><div class="milestone-header"><h4>YOUR MILESTONES</h4><span id="milestone-message">Your first check-in is waiting.</span></div><div class="milestone-grid" id="milestone-grid">
+        <div class="milestone" data-visits="1"><span class="milestone-icon">✳</span><strong>FIRST VISIT</strong><span>Log 1 visit</span></div>
+        <div class="milestone" data-visits="5"><span class="milestone-icon">✦</span><strong>FIVE SESSIONS</strong><span>Log 5 visits</span></div>
+        <div class="milestone" data-visits="10"><span class="milestone-icon">⚡</span><strong>TEN SESSIONS</strong><span>Log 10 visits</span></div>
+        <div class="milestone" data-challenge="complete"><span class="milestone-icon">★</span><strong>SPARK WEEK</strong><span>Finish the 7-day challenge</span></div>
+      </div></article></section>
+
+    <section class="membership section" id="membership"><div class="membership-top"><div><p class="eyebrow dark-eyebrow">SIMPLE MEMBERSHIP PLANS</p><h2>CHOOSE YOUR<br><span>COMMITMENT.</span></h2></div><p class="section-intro">Select a package to see its price and joining details. Our two trainers can help you choose the right fit.</p></div><div class="plans-grid">
+      <details class="plan-card plan-monthly"><summary><span class="plan-period">1 MONTH</span><span class="plan-title">MONTHLY</span><span class="plan-teaser">View monthly options</span><span class="plan-toggle" aria-hidden="true">+</span></summary><div class="plan-details"><p class="plan-choice"><span>Strength training</span><strong>₹800 / month</strong></p><p class="plan-choice"><span>Cardio + strength</span><strong>₹1,000 / month</strong></p><p class="plan-note">One-time ₹500 joining fee applies to the monthly package.</p><a class="plan-link" href="#contact">ASK ABOUT MONTHLY <span>↗</span></a></div></details>
+      <details class="plan-card plan-quarterly"><summary><span class="plan-period">3 MONTHS</span><span class="plan-title">QUARTERLY</span><span class="plan-teaser">View package details</span><span class="plan-toggle" aria-hidden="true">+</span></summary><div class="plan-details"><p class="plan-price">₹2,400</p><p class="plan-note">No joining advance fee.</p><a class="plan-link" href="#contact">ASK ABOUT QUARTERLY <span>↗</span></a></div></details>
+      <details class="plan-card plan-halfyear"><summary><span class="plan-period">6 MONTHS</span><span class="plan-title">HALF YEAR</span><span class="plan-teaser">View package details</span><span class="plan-toggle" aria-hidden="true">+</span></summary><div class="plan-details"><p class="plan-price">₹4,000</p><p class="plan-note">No joining advance fee.</p><a class="plan-link" href="#contact">ASK ABOUT 6 MONTHS <span>↗</span></a></div></details>
+      <details class="plan-card featured-plan plan-annual"><summary><span class="plan-period">12 MONTHS</span><span class="plan-title">ANNUAL</span><span class="plan-teaser">View package details</span><span class="plan-toggle" aria-hidden="true">+</span></summary><div class="plan-details"><p class="plan-price">₹6,000</p><p class="plan-note">No joining advance fee.</p><a class="plan-link" href="#contact">ASK ABOUT ANNUAL <span>↗</span></a></div></details>
+    </div></section>
+
+    <section class="contact" id="contact"><div><p class="eyebrow"><span class="eyebrow-line"></span> YOUR FIRST REP STARTS HERE</p><h2>READY WHEN<br><span>YOU ARE.</span></h2><p>Drop by Spark Fitness to see the gym, meet our two trainers, and choose the membership plan that works for you.</p></div><div class="contact-details"><p class="contact-prompt">VISIT SPARK FITNESS TO JOIN</p><p class="address">Ask our trainers about daily access and membership plans.</p><a class="button button-accent" href="#membership">VIEW MEMBERSHIP PLANS <span>↗</span></a></div></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a><span>SHOW UP. PUT IN THE WORK. GET STRONGER.</span><span>© <span id="year"></span> SPARK FITNESS</span></footer>
+</body>
+</html>
