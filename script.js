@@ -654,9 +654,25 @@ if (memberLoginForm) {
 
   memberLoginForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    loginStatus.textContent = 'Online member sign-in is not connected yet. Your email and password were not saved or sent.';
+    if (!memberLoginForm.checkValidity()) {
+      memberLoginForm.reportValidity();
+      return;
+    }
     loginStatus.hidden = false;
-    passwordInput.value = '';
+    loginStatus.textContent = 'Signing in…';
+    window.sparkSupabase.auth.signInWithPassword({
+      email: document.querySelector('#member-email').value.trim(),
+      password: passwordInput.value,
+    }).then(({ error }) => {
+      if (error) {
+        loginStatus.textContent = error.message;
+        passwordInput.value = '';
+        return;
+      }
+      window.location.href = 'index.html';
+    }).catch(() => {
+      loginStatus.textContent = 'Could not connect to Spark Club sign-in. Please try again.';
+    });
   });
 }
 
@@ -680,9 +696,54 @@ if (memberRegisterForm) {
       return;
     }
 
-    registerStatus.textContent = 'Online registration is not connected yet. Your details were not saved or sent.';
     registerStatus.hidden = false;
-    password.value = '';
-    confirmPassword.value = '';
+    registerStatus.textContent = 'Creating your account…';
+    window.sparkSupabase.auth.signUp({
+      email: document.querySelector('#register-email').value.trim(),
+      password: password.value,
+      options: {
+        emailRedirectTo: `${window.location.origin}/index.html`,
+        data: {
+          full_name: document.querySelector('#register-name').value.trim(),
+          phone: document.querySelector('#register-phone').value.trim(),
+          gym_member_id: document.querySelector('#register-member-id').value.trim(),
+        },
+      },
+    }).then(({ data, error }) => {
+      password.value = '';
+      confirmPassword.value = '';
+      if (error) {
+        registerStatus.textContent = error.message;
+        return;
+      }
+      if (data.session) {
+        registerStatus.textContent = 'Your account is ready. Taking you to Spark Fitness…';
+        window.location.href = 'index.html';
+      } else {
+        registerStatus.textContent = 'Account created. Check your email to confirm it, then sign in.';
+      }
+    }).catch(() => {
+      registerStatus.textContent = 'Could not connect to registration. Please try again.';
+      password.value = '';
+      confirmPassword.value = '';
+    });
+  });
+}
+
+if (document.querySelector('.hero#home')) {
+  window.sparkSupabase.auth.getSession().then(({ data, error }) => {
+    if (error || !data.session) window.location.replace('login.html');
+  }).catch(() => window.location.replace('login.html'));
+}
+
+const adminLoginForm = document.querySelector('#admin-login-form');
+if (adminLoginForm) {
+  const adminPassword = document.querySelector('#admin-password');
+  const adminStatus = document.querySelector('#admin-login-status');
+  adminLoginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    adminStatus.textContent = 'Admin sign-in is ready for Supabase setup. No password was saved or sent.';
+    adminStatus.hidden = false;
+    adminPassword.value = '';
   });
 }

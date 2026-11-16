@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-client.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -28,7 +30,7 @@
         <p class="eyebrow dark-eyebrow">JOIN THE SPARK CLUB</p>
         <h1>LET’S GET<br><span>STARTED.</span></h1>
         <p class="login-intro">Create your account to keep your Spark Club activities together.</p>
-        <div class="login-preview-note"><span>●</span> REGISTRATION PREVIEW — ACCOUNTS AREN’T CONNECTED YET</div>
+        <div class="login-preview-note"><span>●</span> CREATE YOUR SPARK CLUB ACCOUNT. CONFIRM YOUR EMAIL IF ASKED.</div>
         <form id="member-register-form" novalidate>
           <label for="register-name">Full name<input id="register-name" name="name" type="text" autocomplete="name" placeholder="Your name" required></label>
           <label for="register-phone">Mobile number<input id="register-phone" name="phone" type="tel" autocomplete="tel" placeholder="Your mobile number" required></label>

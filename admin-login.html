@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11120f">
+  <meta name="description" content="Spark Fitness administrator sign-in.">
+  <title>Admin Access — Spark Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html#home" aria-label="Spark Fitness home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html#training">Training</a><a href="index.html#membership">Membership</a><a href="products.html">Products</a><a href="community.html">Spark Club</a><a href="login.html">Member Login</a>
+      <a class="nav-cta" href="index.html#contact">VISIT THE GYM <span>↗</span></a>
+    </nav>
+  </header>
+  <main class="login-page">
+    <section class="login-art" aria-hidden="true"><span class="login-orbit orbit-one"></span><span class="login-orbit orbit-two"></span><span class="login-big-mark">S</span><p>MANAGE THE<br>SPARK.</p></section>
+    <section class="login-content">
+      <div class="login-card">
+        <p class="eyebrow dark-eyebrow">SPARK FITNESS ADMIN</p>
+        <h1>ADMIN<br><span>ACCESS.</span></h1>
+        <p class="login-intro">Sign in to manage products, prices, and offers for the Spark Fitness shop.</p>
+        <div class="login-preview-note"><span>●</span> ADMIN SIGN-IN PREVIEW — CONNECT SUPABASE TO ENABLE ACCESS</div>
+        <form id="admin-login-form" novalidate>
+          <label for="admin-email">Admin email<input id="admin-email" name="email" type="email" autocomplete="username" placeholder="admin@example.com" required></label>
+          <label for="admin-password">Password<input id="admin-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required></label>
+          <button class="button button-dark login-submit" type="submit">ADMIN SIGN IN <span>↗</span></button>
+        </form>
+        <p class="login-status" id="admin-login-status" role="status" aria-live="polite" hidden></p>
+        <p class="login-help">For customers: <a href="login.html">Member sign in <span>↗</span></a> or <a href="register.html">create an account <span>↗</span></a></p>
+        <a class="text-link login-back" href="products.html">Back to products <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html#home"><span class="brand-mark">S</span><span>SPARK<span class="brand-light">FITNESS</span></span></a><span>SHOW UP. PUT IN THE WORK. GET STRONGER.</span><span>© <span id="year"></span> SPARK FITNESS</span></footer>
+</body>
+</html>
